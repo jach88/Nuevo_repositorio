@@ -40,3 +40,51 @@ que es unico es el equivalente a un dni  */
     /* solamente usar important en casos de mucha necesidad */
     text-decoration: overline !important;
 }
+
+/* Seudoclases  
+de las etiquetas de tipo tr vas a escoger las impares odd=impar*/
+tr:nth-of-type(odd){
+    background-color: lightskyblue;
+}
+
+tr:nth-of-type(even){
+    background-color: lightgreen;
+}
+
+/* aplica el estilo al parrafo pero solo a los primeros de su tipo */
+p:first-of-type{
+    color: orange;
+    font-weight: bold;
+}
+
+/* los elementos de tipo li en la posicion (x) */
+ol > li:nth-of-type(3){
+    font-style: italic;
+    background-color: rebeccapurple;
+    color: lightgray;
+}
+
+/* para poner border a una tabla */
+table, tr, td, th{ 
+    border: 2px solid gray;
+    border-collapse: collapse; 
+}
+li:nth-of-type(3n+2){
+    color: tomato;
+    background-color: palegreen;
+}
+footer li:hover{
+    text-decoration: underline;
+}
+
+#btn{
+    background-color: lightskyblue;
+    color: white;
+}
+
+#btn:hover{
+    cursor: pointer;
+    background-color: blue;
+}
+
+/* BEM -- block element modifier */

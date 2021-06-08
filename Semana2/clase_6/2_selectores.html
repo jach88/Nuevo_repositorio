@@ -13,7 +13,7 @@
     <nav>
         <!-- unordered list -->
         <ul>
-            <li>Item</li>
+            <li class="titulo">Item</li>
             <li>Item</li>
             <li>Item</li>
         
@@ -31,7 +31,7 @@
             <article>
                 <h3 class="titulo noticia">Articulo 1</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eveniet rem reprehenderit, beatae sit doloremque ea rerum inventore harum maiores.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <span id="importante" style="text-decoration: underline;">Ipsa eveniet rem reprehenderit, </span>beatae sit doloremque ea rerum inventore harum maiores.
                 </p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero odit, vel optio voluptate facilis hic unde aspernatur perspiciatis expedita dolorum.
@@ -43,18 +43,83 @@
             <article>
                 <h3 class="titulo noticia">Articulo 2</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <span id="importante" style="text-decoration: underline;"> Officiis quos voluptatem mollitia</span> quo vel quod repudiandae blanditiis alias aspernatur consequuntur!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos voluptatem mollitia quo vel quod repudiandae blanditiis alias aspernatur consequuntur!
                 </p>
             </article>
         </section>
 
+        <section>
+            <h2> Peliculas favoritas</h2>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Año</th>
+                        <th>Género</th>
+                    </tr>
+                    <tr>
+                        <td>Parasite</td>
+                        <td>2019</td>
+                        <td>Drama</td>
+                    </tr>
+                    <tr>
+                        <td>Interstellar</td>
+                        <td>2014</td>
+                        <td>Ciencia Ficción</td>
+                    </tr>
+                    <tr>
+                        <td>El Origen</td>
+                        <td>2012</td>
+                        <td>Acción</td>
+                    </tr>
+                    <tr>
+                        <td>50 Sombras de Grey</td>
+                        <td>2013</td>
+                        <td>Romance</td>
+                    </tr>
+                    <tr>
+                        <td>Shrek</td>
+                        <td>2010</td>
+                        <td>Comedia</td>
+                    </tr>
+                    <tr>
+                        <td>Mama Mia</td>
+                        <td>2015</td>
+                        <td>Musical</td>
+                    </tr>
+                    <tr>
+                        <td>Kill Bill</td>
+                        <td>2010</td>
+                        <td>Acción</td>
+                    </tr>
+                </table>
+            
+        </section>
     </main>
+
     <aside>
         <article>
             <h3 class="titulo noticia">Articulo adicional</h3>
-            <p class="adicional">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nobis.</p>
+            <p class="adicional">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, nobis.
+            </p>
         </article>
     </aside>
+
+    <footer>
+        <ul class="lenguajes">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScrip</li>
+            <li>ECMAscript6</li>
+            <li>SASS</li>
+            <li>Bootstrap</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Vue</li>
+        </ul>
+
+        <button id="btn">Dame click!</button>
+    </footer>
 
 </body>
 </html>
