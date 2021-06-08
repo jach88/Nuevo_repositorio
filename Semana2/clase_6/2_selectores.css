@@ -18,3 +18,25 @@ ul > li{
 nav > ul> ol > li{
     color: mediumpurple;
 }
+
+/* .nombre de la clase */
+.titulo{
+    color: red;
+    text-decoration: underline;
+}
+
+.noticia{
+    background-color: yellow;
+}
+
+.adicional{
+    font-family: Impact;
+}
+/* #nombre_id
+que es unico es el equivalente a un dni  */
+
+#importante{
+    background-color: yellowgreen;
+    /* solamente usar important en casos de mucha necesidad */
+    text-decoration: overline !important;
+}
