@@ -1,0 +1,25 @@
+.hexadecimal{
+    /* 3 pares RRGGBB  rojo verde y azul */
+    background-color: #34afee;
+    color: #ffffff; /*tambien pueden ser #fff */
+}
+
+.rgb{
+    background-color: rgb(82, 141, 199);
+}
+
+.rgb>p{
+    font-weight: bold;
+    /* el alpha es la transparencia, va entre 0 a 1
+    y admite decimales */
+    color: rgba(80, 43, 43, 0.226);
+}
+
+.hsl{
+    background-color: hsla(180, 75%, 50%);
+}
+
+.grad{
+    background-image: linear-gradient(245deg,skyblue,yellow);
+}
+

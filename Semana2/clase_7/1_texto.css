@@ -7,6 +7,7 @@
 .familia{
     /* le puedo poner varias tipos de fuente si no encuentra el tipo de fuente pasará a la siguiente */
     font-family: 'Mishella', Arial, Helvetica, sans-serif;
+    font-size: 40px;
 }
 
 .google{
