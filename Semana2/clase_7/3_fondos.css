@@ -1,0 +1,30 @@
+body{
+    background-image: url('./penguin.jpg');
+    background-size: 200px; /*ancho*/
+    /*repeat- x repeat -y y no-repeat*/
+    background-repeat: no-repeat;
+}
+
+.card{
+    width: 400px;
+    height: 600px;
+    border: 2px solid gray;
+    background-image: url(./antartida.jpg);
+    background-size: cover;
+    background-position:center;
+    /* border grosor stilo y color */
+    border:5px solid red;
+    /* border-radius:20px ; */
+    /* border-radius: topleft toprigth botomright botomleft; */
+    border-radius:0px 80px 0px 80px ;
+
+}
+
+.circulo{
+    /* alto y ancho iguales */
+    width: 400px;
+    height: 400px;
+    border:3px solid darkslateblue;
+    border-radius: 50%;
+    box-shadow: 20px 10px 0px black;
+}
