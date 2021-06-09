@@ -1,0 +1,32 @@
+/* font face permite usar una fuente externa de un archivo y funciona para poner un alias e indicar la ubicación de mi archivo fuente */
+@font-face {
+    font-family: 'Mishella'; /* alias*/
+    src: url('./Mishella.otf'); /*url*/
+}
+
+.familia{
+    /* le puedo poner varias tipos de fuente si no encuentra el tipo de fuente pasará a la siguiente */
+    font-family: 'Mishella', Arial, Helvetica, sans-serif;
+}
+
+.google{
+    font-family: 'Staatliches', cursive;
+    /* el grosor de la fuente */
+    font-weight: bold;
+}
+
+.fontstyle{
+    font-style: italic;
+}
+
+.textindent{
+    text-indent: 20px;
+}
+
+.wordspacing{
+    word-spacing: 25px;
+}
+
+.lineheight{
+    line-height: 30px;
+}
