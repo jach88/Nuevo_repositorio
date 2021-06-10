@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: white; */
+    background-color:hsl(0, 0%, 0%) ;
+    font-family: 'Open Sans',sans-serif;
+    color: white;
+}
+
+header{
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+img{
+    width: 1000px;
+    /* margin arriba abajo costados */
+    /* margin top right botton left */
+    /* margin: 50px 150px; */
+}
