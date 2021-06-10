@@ -1,0 +1,31 @@
+/* el asterisco afecta a todos los elementos */
+*{
+    border: 1px solid red;
+}
+
+h1{
+    font-size: 30px;
+}
+main{
+    width: 800px;
+}
+
+.articulo1{
+    width: 300px;
+    height: 300px;
+}
+
+.articulo2{
+    font-size: 18pt;
+    /* el porcentaje usa como referencia al padre en este caso el main */
+    width: 25%;
+}
+
+.big{
+    border: 2px solid blue;
+    background-color: skyblue;
+    /*vw viewport width, vh view port height*/
+    /* Viewport toda la parte visible del navegador */
+    width: 100vw;
+    height: 100vh;
+}
