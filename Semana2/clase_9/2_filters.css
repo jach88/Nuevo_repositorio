@@ -1,0 +1,13 @@
+.filtro{
+    height: 500px;
+    filter: blur(3px) grayscale(1);
+}
+
+.filtro:hover{
+    filter: brightness(3);
+}
+
+.filtro2{
+    height: 500px;
+    filter: contrast(5) opacity(3);
+}
