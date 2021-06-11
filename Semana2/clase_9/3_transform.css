@@ -1,0 +1,12 @@
+.transformacion{
+    width: 20ox;
+    height: 20px;
+    background-color: teal;
+    transform: scale(5,2) !important;
+}
+
+.mujer{
+    width: 200px;
+    height: 500px;
+    transform: skew(37deg, 321deg) rotate(29deg) translate3d(100px,200px, 100px );
+}

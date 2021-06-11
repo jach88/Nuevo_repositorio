@@ -1,0 +1,65 @@
+/* .animacion{
+    width: 500px;
+    height: 400px;
+    
+    animation: miAnimacion 5s infinite;
+}
+
+@keyframes miAnimacion {
+    0%{
+        background-color:aqua;
+    }
+    50%{
+        background-color:violet;
+        transform: scale(5);
+    }
+    75%{
+        transform: scale(1);
+    }
+    100%{
+        display: inline;
+        background-color: red;
+
+    }
+} */
+
+.jirafa{
+    width: 500px;
+    height: 400px;    
+    animation: miAnimacion 5s infinite;
+
+}
+
+@keyframes miAnimacion {
+    0%{
+        background-color:aqua;
+        transform: rotate(0deg);
+    }
+    10%{
+        filter: sepia(80);
+        transform: rotate(90deg);
+    }
+    20%{
+        filter: sepia(80);
+        transform: rotate(270deg);
+    }
+    30%{
+        filter: sepia(80);
+        
+    }
+    50%{
+        background-color:violet;
+        transform: scale(0);
+        filter: sepia(80);
+        transform: rotate(360deg);
+    }
+    75%{
+        transform: scale(1);
+        filter: sepia(80);
+    }
+    100%{
+        display: inline;
+        background-color: red;
+
+    }
+}
