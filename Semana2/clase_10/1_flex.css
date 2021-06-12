@@ -1,0 +1,36 @@
+*{
+    background-color: black;
+}
+
+.contenedor-fila{
+    display: flex;
+    flex-direction: row;   /*Direccion en la que muestra los elementos*/
+    
+    
+}
+
+.contenido-fila{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: teal;
+    
+    
+}
+.contenedor-columna{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contenido-columna{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: yellow;
+}
+
+.elemento-pequeño{
+
+}
