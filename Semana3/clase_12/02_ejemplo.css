@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid gray; */
+}
+
+/* variables */
+:root{
+    --color-primario:#fb8f1d;
+    --color-secundario:#1ABE84;
+}
+
+nav{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* todos los img dentro de nav */
+nav img{
+    max-width: 40px;
+}
+
+.container{
+    max-width: 900px;
+    margin:0 auto;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav li{
+    list-style: none;
+    margin: 0 10px;
+    cursor: pointer;    
+}
+
+nav li:nth-of-type(4){
+    margin-right: 5px;
+}
+
+nav li:nth-of-type(5){
+    margin-left: 5px;
+}
+
+
+button{
+    outline: none;
+    
+}
+
+
+
+
+.btn-register{
+    background-color: var(--color-primario);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border:2px solid var(--color-primario);
+}
+
+.btn-login{
+    background-color: white;
+    color: var(--color-primario);
+    padding: 8px;
+    border-radius: 5px;
+    border:2px solid var(--color-primario)
+}
+
+/* agregando RWD al menú */
+
+#check{
+    /* el check se esconde */
+    position: absolute;
+    visibility: hidden;
+    z-index:-99;
+}
+
+@media screen and (max-width:768px) {
+
+    /* menu */
+    .menu{
+        position: fixed;
+        background-color: var(--color-secundario);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;/*esto me va servir para esconder el menu despues*/
+        text-align: center;
+        /* padding arriba y abajo costados */
+        padding: 100px 0;
+        z-index:20;
+    }
+    
+}
