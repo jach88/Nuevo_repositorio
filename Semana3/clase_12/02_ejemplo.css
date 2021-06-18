@@ -100,7 +100,7 @@ header{
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 /* una buena practica es definir las propiedades comunes para varios elementos  */
 h1, label{
