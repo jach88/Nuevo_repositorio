@@ -9,12 +9,15 @@
 :root{
     --color-primario:#fb8f1d;
     --color-secundario:#1ABE84;
+    --color-dark: #afb0b9;
+    --color-darl-bold:#7d7987;
 }
 
 nav{
     font-family: 'Lato', sans-serif;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 /* todos los img dentro de nav */
@@ -34,10 +37,11 @@ nav ul{
 
 nav li{
     list-style: none;
+    /* margin arriba abajo costados */
     margin: 0 20px;
     cursor: pointer;    
 }
-
+/* del nav al elemento de tipo li numero 4 */
 nav li:nth-of-type(4){
     margin-right: 5px;
 }
@@ -46,9 +50,14 @@ nav li:nth-of-type(5){
     margin-left: 5px;
 }
 
+.li__disabled{
+    color:var(--color-dark) !important;
+    font-size: 16px;
+    font-weight: 400;
+}
 
 button{
-    outline: none;
+    outline:none;
     
 }
 
@@ -56,16 +65,24 @@ button{
     background-color: var(--color-primario);
     color: white;
     padding: 8px;
+    padding-right: 30px;
+    padding-left: 30px;
     border-radius: 5px;
-    border:2px solid var(--color-primario);
+    border:1px solid var(--color-primario);
 }
 
 .btn-login{
     background-color: white;
     color: var(--color-primario);
     padding: 8px;
+    padding-right: 30px;
+    padding-left: 30px;
     border-radius: 5px;
     border:2px solid var(--color-primario)
+}
+
+.width-40{
+    width: 40% !important;
 }
 
 /* agregando RWD al menú */
@@ -78,7 +95,7 @@ button{
 }
 
 .menu{
-    transition: 0s;
+    transition: 0.5s;
 }
 
 .show-menu-btn, .hide-menu-btn{
@@ -102,10 +119,19 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
 }
-/* una buena practica es definir las propiedades comunes para varios elementos  */
-h1, label{
-    font-family: "Lato", sans-serif;
+/* una buena practica es definir las propiedades comunes para varios elementos ej. h1,h2,h3,h4,h5,h6 {font-family: 'Lato';} */
+
+h1{
+    font-size: 64px;
     /* font-weight: bold; */
+}
+
+h2{
+    font-size: 36px;
+}
+
+label{
+    font-family: 'Lato', sans-serif;
 }
 
 .header-content input{

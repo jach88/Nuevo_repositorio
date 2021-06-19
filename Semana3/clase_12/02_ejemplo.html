@@ -16,15 +16,16 @@
         <nav>
             <img src="./viajes.png" alt="logo">
             <input type="checkbox" id="check">
-
+            <!-- fon hace atributo mediante un ID a un input -->
             <label for="check" class="show-menu-btn">
             <i class="fas fa-bars"></i>
         </label>
 
             <ul class="menu">
                 <li>Home</li>
-                <li>Destinos</li>
-                <li>About</li>
+                <li class="li_disabled">Destinos</li>
+                <li class="li_disabled">About</li>
+                <li class="li_disabled">Compañeros</li>
                 <li>
                     <button class="btn-login">Login</button>
                 </li>
@@ -45,9 +46,11 @@
                 <h1>Explora y viaja</h1>
                 <label>Buscador de sitios</label>
                 <input 
+                class="input-search"
                 type="text"
-                placeholder="Ingrese un sitio">
-                <button id="btn-search">
+                placeholder="Ingrese un sitio"
+                >
+                <button id="btn-register width-40">
                     Explorar
                 </button>
             </div>
@@ -55,6 +58,25 @@
                 <img src="./assets/img/img1.png" alt="img-header">
             </div>
         </header>
+        <section class="section-container mb-30">
+            <div>
+                <!-- aqui va la imagen -->
+                <img width="450" src="./assets/img/img2.png" alt="img-section-2">
+            </div>
+            <div>
+                <!-- aqui va el texto -->
+                <h2 class="mn-30">
+                    A new way to explore the world
+                </h2>
+                <p class="section-p mb-30">
+                    For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect 
+            trip, but now, they can also let Lonely Planet Experiences lead the way
+                </p>
+                <button class="btn-register">Learn more</button>
+            </div>
+        </section>
+        <!-- cards -->
+
 
 
         <section>
