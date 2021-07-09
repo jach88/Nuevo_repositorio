@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+<body>
+ 
+    <script type="text/javascript">
+        function butaca(){
+ 
+            this.fila   = new Array();
+            this.estado = new Array();   //0 = libre 1= ocupado y 2= reservado
+            this.numero = new Array();
+ 
+        }
+ 
+        function iniciobutaca(numerob, filab, estadob, but){
+ 
+            but.numero[numerob]   = numerob + 1;
+            but.fila[numerob]     = filab;
+            but.estado[numerob]   = estadob;
+ 
+        }
+ 
+        function cine(fila, butfila, butacac){
+ 
+            this.filas      = fila;
+            this.butacas    = butacac;
+            this.butacafila = butfila;
+ 
+        }
+ 
+        function funciononcick(valor){
+ 
+            micine.butacas.estado[valor] = 2;
+            document.getElementById(valor).src = "seleccionado.png";
+            // document.getElementById(valor).setAttribute("src","seleccionado.png") 
+        }
+ 
+        function funcionalerta(){
+ 
+           alert("este asiento esta reservado");
+ 
+        }
+ 
+        // INICIO SCRIPT
+ 
+        var fila = parseInt(prompt("introduce un numero de filas"));
+ 
+        var butfila = parseInt(prompt("introduce un numero de butacas por filas"));
+ 
+        butacas = new butaca();
+ 
+        // iNICIOALIZAR LAS BUTACAS
+        var num2 = 0;
+ 
+        for(var filai = 1; filai <= fila; filai++){
+ 
+            for(var butacai = 1; butacai <= butfila; butacai++ ){
+ 
+               var estado = Math.floor((Math.random() * 2 ) + 0);
+ 
+                num2 = (butacai +((filai-1)* butfila)) -1;
+ 
+                iniciobutaca(num2, filai, estado, butacas);
+ 
+            }
+        }
+ 
+         micine= new cine(fila, butfila, butacas);
+ 
+        function mostrar(){
+            var numero = 0;
+            document.write("<table>");
+ 
+            for(var filai = 1; filai <= micine.filas; filai++){
+ 
+                document.write("<tr>");
+ 
+                for(var butacai = 1; butacai <= micine.butacafila; butacai++ ){
+ 
+                    //document.write("</td><img src='disponible.png'></td>");
+                    numero ++;
+                    console.log(numero);
+                    console.log("estado numerob");
+                    console.log(micine);
+                    if(micine.butacas.estado[numero] == 0){
+ 
+                        document.write("<td><img  id='");
+                        document.write(numero);
+                        document.write(" ' onclick='funciononcick(");
+                        document.write(numero);
+                        document.write(")' src='disponible.png'></td>");
+ 
+                   }else{
+ 
+                       document.write("<td><img onclick='funcionalerta()' src='reservado.png'></td>");
+ 
+                   }
+ 
+                }
+ 
+                document.write("</tr>");
+            }
+        document.write("</table>");
+ 
+        }
+ 
+        mostrar();
+ 
+    </script>
+ 
+</body>
+</html>
