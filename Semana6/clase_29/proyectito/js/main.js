@@ -59,7 +59,7 @@ let listaPlatillos = [
 
   let divContenido = document.getElementById("contenido")
 
-  let tbodyCarrito = document.getElementsById("tbody-carrito")
+  let tbodyCarrito = document.getElementById("tbody-carrito")
 
   let carrito = [];
 
@@ -67,7 +67,8 @@ let listaPlatillos = [
       let htmlTarjetas = "";
 
       listaPlatillos.forEach((plato) =>{
-        htmlTarjetas = htmlTarjetas + 
+        htmlTarjetas = 
+          htmlTarjetas + 
         `<div class="tarjeta">
             <div class="imagen">
                 <img src="${plato.imagen}">
@@ -97,9 +98,9 @@ let listaPlatillos = [
    */
 //obtenemos los btn-agregar, despues del cambio al innerHTlm de divContenido, ya que necesitamos que las tarjetas que representen cada producto exista en el dom
 //obtenemos un HTMLCollection que pasaremos a un arreglo
-  let btnsAgregar = document.getElementsByClassName("btn-agregar")
+  let btnsAgregar = document.getElementsByClassName("btn-agregar");
   //convertiremos el HTMLCollection a un array
-  let arregloBtnsAgregar = Array.from(btnsAgregar)
+  let arregloBtnsAgregar = Array.from(btnsAgregar);
 
   //recorremos el arreglo
   arregloBtnsAgregar.forEach((boton) =>{
@@ -108,12 +109,13 @@ let listaPlatillos = [
 
       //necesitamos saber que boton estamos presionando, entonces utilizaremos el atributo personalizado que guarda el id del plato para reconocerlo
       //y lo hacemos mediante el metodo getAttribute este metodo devuelve el valor del atributo
-      let idObtenido = boton.getAttribute("data-idplato")
+      let idObtenido = boton.getAttribute("data-idplato");
       // alert("Me hiciste click! "+ idObtenido)
 
       //requerimos convertir el id a un numer para que se compare correctamente, ya que se obtiene como un string, por eso se le agrega un +
-      let platoObtenido = buscarPlatoPorId(+idObtenido)
-      console.log(platoObtenido)
+      let platoObtenido = buscarPlatoPorId(+idObtenido);
+
+      agregarACarrito(platoObtenido)
     })
   })
 
@@ -124,7 +126,7 @@ let listaPlatillos = [
         return listaPlatillos[i]
       }
     }
-  }
+  };
 
   //1. necesitamos saber si el plato existe
   //2 si existe se maneja cantidad
@@ -156,9 +158,9 @@ let listaPlatillos = [
   };
 
   let dibujarCarrito = () =>{
-    let htmlCarrito =""
+    let htmlCarrito = ""
 
-    carrito.forEach((pedido)=>{
+    carrito.forEach((pedido)=> {
       htmlCarrito = htmlCarrito +
       `<tr>
         <td>${pedido.plato.nombre}</td>
