@@ -15,7 +15,25 @@ const obtenerProductos = () =>{
     })
 }
 
+const crearProducto =async (objProducto)=>{
+    const configuracion ={
+        method:'POST',
+        body:JSON.stringify(objProducto),
+        headers:{'Content-Type':'application/json'}
+    }
+
+    try {
+        const respuesta = await fetch(URL, configuracion)
+        const data = await respuesta.json()
+        return data //resolve
+    } catch (error) {
+        throw error
+    }
+        
+}
+
 export{
-    obtenerProductos
+    obtenerProductos,
+    crearProducto
 }
 
