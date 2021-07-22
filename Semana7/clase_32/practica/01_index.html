@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- ponemos un container para que podamos indicar el contenedor de nuestros elementos -->
+            <div class="container-fluid">
+                <!-- logo o nombre de la pagina o app -->
+                <img src="bootstrap.svg" alt="Bootstrap" width="32" height="32">
+                <a href="#" class="navbar-brand ms-2">Pricing example</a>
+        
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#miNavbar">
+                    <!-- sandwich -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- importante se requiere un duv con las clases collapse navbar-collapse que sirvan de envoltura para los items de navegacion y que estos colapsen correctamente -->
+                <div class="collapse navbar-collapse" id="miNavbar">
+                    <!-- navbar-nav es un contenedor para los li -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item me-2">
+                            Features
+                        </li>
+                        <li class="nav-item me-2">
+                            Enterprice
+                        </li>
+                        <li class="nav-item me-2">
+                            Support
+                        </li>
+                        <li class="nav-item me-2">
+                            Price
+                        </li>
+                    </ul>        
+                </div>        
+            </div>
+        </nav>
+        
+        <h1 class="px-3 py-3 my-3 text-center">
+            Pricing
+            <br>
+            <br>
+            <p class="lead mb-4">
+                Quickly build an effective pricing table for your potencial customers with this Bootstrap example. Its built with default Bootstrap components and utilities with little customization
+            </p>
+        </h1>
+        
+        <div class="row row-cols-1 row-cols-md-3 mb-3">
+            <div class="col-4">
+                <div class="card" >
+                    <div class="card-header text-center py-3">Free</div>
+                    <div class="card-body">
+                        <h1 class="card-title text-center">
+                        $29
+                            <small class="text-muted">/mo </small> 
+                        </h1>                        
+                        <ul  class="list-unstyled mt-3 mb-4 text-center">
+                           <li >30 users included</li>
+                           <li >15 GB of storage</li>
+                           <li >Phone and email support</li>
+                           <li > Help center access</li>
+                        </ul> 
+                        <div class="card-footer">
+                        <div class="d-grid">
+                            
+                            <button class="btn btn-lg btn-outline-primary ">
+                                Sign up for free
+                            </button>
+                        </div>
+                        </div>                             
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" >
+                    <div class="card-header text-center py-3">Pro</div>
+                    <div class="card-body">
+                        <h1 class="card-title text-center">
+                        $15
+                            <small class="text-muted">/mo </small> 
+                        </h1>                        
+                        <ul  class="list-unstyled mt-3 mb-4 text-center">
+                           <li >30 users included</li>
+                           <li >15 GB of storage</li>
+                           <li >Phone and email support</li>
+                           <li > Help center access</li>
+                        </ul>
+                        <div class="card-footer">
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg ">
+                                Get Started
+                            </button>
+                        </div>
+                        </div>                             
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary" >
+                    <div class="card-header text-center bg-primary text-white py-3" >Enterprice</div>
+                        <div class="card-body">
+                            <h1 class="card-title text-center">
+                            $29
+                                <small class="text-muted">/mo </small> 
+                            </h1>                        
+                            <ul  class="list-unstyled mt-3 mb-4 text-center">
+                               <li >30 users included</li>
+                               <li >15 GB of storage</li>
+                               <li >Phone and email support</li>
+                               <li > Help center access</li>
+                            </ul>
+                            <div class="card-footer"> 
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg ">
+                                    Contact us
+                                </button>
+                            </div> 
+                            </div>                            
+                        </div>
+                    
+                        
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+        <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td>X</td>
+            <td>X</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td>X</td>
+            <td>X</td>
+            <td>X</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td>X</td>
+            <td>X</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td>X</td>
+            <td>X</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td>X</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    </main>
+
+    
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
