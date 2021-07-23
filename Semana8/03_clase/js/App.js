@@ -4,7 +4,7 @@
 //convertir datos a html
 //agragar al dom
 
-import { obtenerProductos, crearProducto } from "./productoService.js"
+import { obtenerProductos, crearProducto, eliminarProducto } from "./productoService.js"
 import { imprimirProductos } from "./Interfaz.js"
 
 
@@ -18,6 +18,7 @@ const getProductos = () =>{
     .then(productos =>{
         //console.log(productos)
         imprimirProductos(productos)
+        getBotonesEliminar()
     })
 }
 getProductos()
@@ -47,6 +48,44 @@ formCrear.addEventListener("submit",async (e) =>{
   } catch (error) {
       console.log(error)
   }
-
   
 })
+
+const getBotonesEliminar = () =>{
+    const btnsEliminar = document.getElementsByClassName("eliminar")
+    const arrBtnsEliminar = Array.from(btnsEliminar)
+    
+    arrBtnsEliminar.forEach((boton)=>{
+        boton.addEventListener("click",async() => {
+            const id = boton.getAttribute("data-id")
+
+            Swal.fire({
+                icon:'warning',
+                title:'Deseal eliminar el producto',
+                showConfirmButton:true,
+                confirmButtonText:'Si, eliminar',
+                showCancelButton:true,
+                cancelButtonText:'No, cancelar'
+            }).then(async (result) => {
+                if(result.isConfirmed){
+                    let respuesta = await eliminarProducto(id)
+                    console.log(respuesta)
+                    getProductos()
+                }
+            })
+
+            
+        })
+    })
+}
+
+const getBotonesActualizar = () =>{
+    const btnsActualizar = document.getElementsByClassName("actualizar")
+    const arrBtnsActualizar = Array.from(btnsActualizar)
+
+    arrBtnsActualizar.forEach((boton)=>{
+        boton.addEventListener("click", () => {
+            console.log("Click actualizar!")
+        })
+    })
+}
