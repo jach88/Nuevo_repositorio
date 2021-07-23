@@ -4,7 +4,11 @@
 //convertir datos a html
 //agragar al dom
 
-import { obtenerProductos, crearProducto, eliminarProducto } from "./productoService.js"
+import { obtenerProductos, 
+         crearProducto, 
+         eliminarProducto,
+        obtenerProductosPorId,
+        actualizarProducto } from "./productoService.js"
 import { imprimirProductos } from "./Interfaz.js"
 
 
@@ -13,12 +17,16 @@ const modalCrear = document.getElementById("modalCrear")
 const bsModalCrear = new bootstrap.Modal(modalCrear)
 const formCrear = document.getElementById("formCrear")
 
+let modoActualizar = false
+let productoActualizar; //guarda el id a actualizar
+
 const getProductos = () =>{
     obtenerProductos()
     .then(productos =>{
         //console.log(productos)
         imprimirProductos(productos)
         getBotonesEliminar()
+        getBotonesActualizar()
     })
 }
 getProductos()
@@ -38,13 +46,33 @@ formCrear.addEventListener("submit",async (e) =>{
       prod_stock: formCrear[`prod_stock`].value,
       prod_oferta: formCrear[`prod_oferta`].value,
   }
+ 
+  const productoEditado ={
+    prod_id:productoActualizar,  
+    prod_nombre: formCrear["prod_nombre"].value,
+    prod_descripcion: formCrear[`prod_descripcion`].value,
+    prod_precio: formCrear[`prod_precio`].value,
+    prod_stock: formCrear[`prod_stock`].value,
+    prod_oferta: formCrear[`prod_oferta`].value,
+
+  }
 
   try {
-    let rpta = await crearProducto(nuevoProducto)
-    // console.log(rpta) 
-    formCrear.reset() //Limpio de formulario
-    bsModalCrear.hide()  //escondo el modal
-    getProductos() //obtengo los productos actualizados 
+      if(modoActualizar === false){
+          //si no estamos actualizando creamos un nuevo producto
+        let rpta = await crearProducto(nuevoProducto)
+        // console.log(rpta) 
+        formCrear.reset() //Limpio de formulario
+        bsModalCrear.hide()  //escondo el modal
+        getProductos() //obtengo los productos actualizados 
+      }else{
+          let rpta = await actualizarProducto(productoEditado)
+          formCrear.reset()
+          bsModalCrear.hide()
+          getProductos()
+          modoActualizar = false  //como ya temrinamos de actualizar regresa a su modo original
+      }
+    
   } catch (error) {
       console.log(error)
   }
@@ -84,8 +112,22 @@ const getBotonesActualizar = () =>{
     const arrBtnsActualizar = Array.from(btnsActualizar)
 
     arrBtnsActualizar.forEach((boton)=>{
-        boton.addEventListener("click", () => {
-            console.log("Click actualizar!")
+        boton.addEventListener("click", async() => {
+            const id = boton.getAttribute("data-id")
+            const productoObtenido = await obtenerProductosPorId(id)
+            // console.log(productoObtenido)
+            let {prod_nombre, prod_descripcion, prod_stock, prod_precio, prod_oferta} = productoObtenido
+
+            formCrear.prod_nombre.value = prod_nombre
+            formCrear.prod_descripcion.value = prod_descripcion
+            formCrear.prod_stock.value = prod_stock  
+            formCrear.prod_precio.value = prod_precio
+            formCrear.prod_oferta.value = prod_oferta
+
+            productoActualizar = id
+            modoActualizar = true
+
+            bsModalCrear.show()
         })
     })
 }
