@@ -27,10 +27,16 @@
 
 
 export default function App() {
+  let titulo = "Mi App"
+
   return (
     <div>
-      holas <br />
-      aqui se colocara todo el codigo de React
+      <h1>{titulo}</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, recusandae.
+      </p>
+      <hr />
+      <br />
     </div>
 
   )
