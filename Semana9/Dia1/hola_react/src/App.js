@@ -1,43 +1,27 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Hola mundooooooo
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
+import { useState } from 'react'
+import Footer from './components/Footer'
+import ListaTareas from './components/ListaTareas'
 
 export default function App() {
-  let titulo = "Mi App"
+  const [tareas, setTareas] = useState(["pasear al perro"])
+
+  const anadirTarea = () =>{
+    setTareas([...tareas,"lavar la ropa"])
+  }
+
+  const miTitulo = "Mi app"
 
   return (
     <div>
-      <h1>{titulo}</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, recusandae.
-      </p>
+      <h1>{miTitulo}</h1>     
+      <ListaTareas tareas={tareas}/>
       <hr />
-      <br />
-    </div>
+      <button onClick={anadirTarea}>
+        Anadir Tarea
+      </button>
+          <Footer mensaje={"Empresa1"}/>
+          <Footer mensaje={"Empresa2"}/>
 
+    </div>
   )
 }
