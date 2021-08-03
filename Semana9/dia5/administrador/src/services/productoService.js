@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = `https://6104aac04b92a000171c5ca1.mockapi.io/productos`
+const URL = `${process.env.REACT_APP_API}productos`
 
 const obtenerProductos = async () =>{
     try {
@@ -13,6 +13,19 @@ const obtenerProductos = async () =>{
     }
 }
 
+const crearProducto = async (NuevoProducto) => {
+    try {
+        const headers = {
+            "Content-Type": "application/json"
+        }
+        let { data } = await axios.post(URL, NuevoProducto, { headers })
+        return data
+    } catch (error) {
+        throw error
+    }
+}
+
 export {
-    obtenerProductos
+    obtenerProductos,
+    crearProducto
 }
