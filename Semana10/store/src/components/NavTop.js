@@ -41,6 +41,12 @@ export default function NavTop() {
 								</Badge>
 							</Link>
 						</Nav.Link>
+
+						<Nav.Link>
+							<Link to="/login">
+								Ingresar
+							</Link>
+						</Nav.Link>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
